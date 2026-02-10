@@ -9,5 +9,17 @@ package controller;
  * @author ignac
  */
 public class CensusControler {
+
+    public static void registrarPlaneta() {
+    }
+
+    public static void censarSer() {
+    }
+
+    public static void borrarSer() {
+    }
+
+    public static void obtenerSerPorNombre() {
+    }
     
 }
