@@ -10,8 +10,8 @@ import java.util.Objects;
  *
  * @author ignac
  */
-public class Ser {
-    private String nombre;
+public abstract class Ser {
+     String nombre;
 
     public Ser(String nombre) {
         this.nombre = nombre;
