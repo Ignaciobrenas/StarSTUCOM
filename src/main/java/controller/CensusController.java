@@ -8,7 +8,7 @@ package controller;
  *
  * @author ignac
  */
-public class CensusControler {
+public class CensusController {
 
     public static void registrarPlaneta() {
     }

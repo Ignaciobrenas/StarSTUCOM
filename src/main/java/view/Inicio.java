@@ -1,6 +1,6 @@
 package view;
 
-import controller.CensusControler;
+import controller.CensusController;
 import java.util.Scanner;
 
 /*
@@ -23,16 +23,16 @@ public class Inicio {
             scanner.nextLine();
             switch (opcion) {
                 case 1:
-                    CensusControler.registrarPlaneta();
+                    CensusController.registrarPlaneta();
                     break;
                 case 2:
-                    CensusControler.censarSer();
+                    CensusController.censarSer();
                     break;
                 case 3:
-                    CensusControler.borrarSer();
+                    CensusController.borrarSer();
                     break;
                 case 4:
-                    CensusControler.obtenerSerPorNombre();
+                    CensusController.obtenerSerPorNombre();
                     break;
                 case 5:
                     System.out.println("Saliendo del programa");
