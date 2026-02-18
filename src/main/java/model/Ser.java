@@ -1,17 +1,14 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * @author ignac
  */
 package model;
 
-import java.util.Objects;
+import java.io.Serializable;
 
-/**
- *
- * @author ignac
- */
-public abstract class Ser {
-     String nombre;
+public abstract class Ser implements Serializable {
+
+    protected String nombre;
 
     public Ser(String nombre) {
         this.nombre = nombre;
@@ -21,28 +18,14 @@ public abstract class Ser {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Ser other = (Ser) obj;
-        return Objects.equals(this.nombre, other.nombre);
+        if (this == obj) return true;
+        if (obj == null || !(obj instanceof Ser)) return false;
+        Ser otroSer = (Ser) obj;
+        return this.nombre.equalsIgnoreCase(otroSer.nombre);
     }
 
     @Override
-    public String toString() {
-        return "Ser{" + "nombre=" + nombre + '}';
-    }
-    
+    public abstract String toString();
 }

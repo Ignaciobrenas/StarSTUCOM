@@ -1,52 +1,33 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * @author ignac
  */
 package model;
 
-/**
- *
- * @author ignac
- */
-public class Vulcaniano extends Ser{
-    private static int nivelCivilizacion = 3 ;
-    private static int indiceMeditacion;
+public class Vulcaniano extends Ser {
 
-    public Vulcaniano(String nombre) {
+    private int nivelCivilizacion = 3;
+    private int indiceMeditacion;
+
+    public Vulcaniano(String nombre, int indiceMeditacion) {
         super(nombre);
+        this.indiceMeditacion = indiceMeditacion;
     }
 
-    public static int getNivelCivilizacion() {
-        return nivelCivilizacion;
-    }
-
-    public static void setNivelCivilizacion(int nivelCivilizacion) {
-        Vulcaniano.nivelCivilizacion = nivelCivilizacion;
-    }
-
-    public static int getIndiceMeditacion() {
+    public int getIndiceMeditacion() {
         return indiceMeditacion;
     }
 
-    public static void setIndiceMeditacion(int indiceMeditacion) {
-        if (indiceMeditacion >= 0 && indiceMeditacion <= 10) {
-            Vulcaniano.indiceMeditacion = indiceMeditacion;
-        } else {
-            System.out.println("Error: El indice de mediacion debe estar entre 0 y 130");
-        };
+    public void setIndiceMeditacion(int indiceMeditacion) {
+        this.indiceMeditacion = indiceMeditacion;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public int getNivelCivilizacion() {
+        return nivelCivilizacion;
     }
 
     @Override
     public String toString() {
-        return "Vulcaniano{" + '}';
+        return "Vulcaniano: " + nombre + " - Nivel de meditación: " + indiceMeditacion;
     }
-    
 }

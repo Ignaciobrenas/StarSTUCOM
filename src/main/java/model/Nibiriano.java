@@ -1,48 +1,29 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * @author ignac
  */
 package model;
 
-/**
- *
- * @author ignac
- */
-public class Nibiriano extends Ser{
-    private static int nivelCivilizacion = 2;
-    private static boolean vegetariano;
-    
+public class Nibiriano extends Ser {
 
-    public Nibiriano(String nombre) {
+    private int nivelCivilizacion = 2;
+    private boolean vegetariano;
+
+    public Nibiriano(String nombre, boolean vegetariano) {
         super(nombre);
+        this.vegetariano = vegetariano;
     }
 
-    public static int getNivelCivilizacion() {
-        return nivelCivilizacion;
-    }
-
-    public static void setNivelCivilizacion(int nivelCivilizacion) {
-        Nibiriano.nivelCivilizacion = nivelCivilizacion;
-    }
-
-    public static boolean isVegetariano() {
+    public boolean isVegetariano() {
         return vegetariano;
     }
 
-    public static void setVegetariano(boolean vegetariano) {
-        Nibiriano.vegetariano = vegetariano;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public int getNivelCivilizacion() {
+        return nivelCivilizacion;
     }
 
     @Override
     public String toString() {
-        return "Nibiriano{" + '}';
+        return "Nibiriano: " + nombre + " - Dieta: " + (vegetariano ? "Flora Roja" : "Peces");
     }
 }
